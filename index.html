@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Master Mind</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="container">
+		<div id="board-div"></div>
+		<div id="controls">
+			<div id="color-selector-div">
+				<table>
+					<thead>
+						<tr>
+							<td id="color-select-1"></td>
+							<td id="color-select-2"></td>
+							<td id="color-select-3"></td>
+							<td id="color-select-4"></td>
+						</tr>
+						<tr>
+							<td id="color-select-5"></td>
+							<td id="color-select-6"></td>
+							<td id="color-select-7"></td>
+							<td id="color-select-8"></td>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div id="submit-btn-div">
+				<button id="submit-btn" onclick="submitAttempt()"> Submit Attempt </button>
+			</div>
+		</div>
+	</div>
+	<h1 id="no-attempts" hidden>You are out of attempts :(</h1>
+	<script src="confetti.js"></script>
+	<script src="createElements.js"></script>
+	<script src="skecth.js"></script>
+</body>
+
+</html>

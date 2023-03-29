@@ -1,0 +1,152 @@
+html,
+body {
+    display: flex;
+    justify-content: center;
+    font-family: comic sans ms;
+    text-align: center;
+}
+
+canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    border: 3px solid black;
+    padding: 3%;
+}
+
+.cells {
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.cell-head {
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.cell-img {
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 17px;
+    transition: .3s;
+    background-color: rgb(106, 100, 100);
+    opacity: 25%;
+}
+
+.cell-img-result {
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 5px;
+    transition: .3s;
+    background-color: rgb(106, 100, 100);
+    opacity: 25%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cell-img-result-red {
+    background-color: red;
+}
+
+.cell-img-result-white {
+    background-color: white;
+}
+
+.cell-img-enabled {
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 17px;
+    transition: .3s;
+    background-color: rgb(148, 144, 144);
+}
+
+.cell-img-enabled:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.cell-img-enabled:active {
+    cursor: wait;
+    transform: scale(0.9);
+}
+
+.cell-img-played {
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 17px;
+    transition: .3s;
+    opacity: 80%;
+}
+
+.cell-img-ans {
+    border: 2px solid black;
+    border-radius: 100%;
+    padding: 17px;
+    transition: .3s;
+    background-color: rgb(104, 101, 101);
+    opacity: 75%;
+}
+
+#controls {
+    display: inline-block;
+}
+
+#color-selector-div {
+    position: fixed;
+    top: 200px;
+    left: 100px;
+    text-align: left;
+    border: 4px solid black;
+    border-radius: 10px;
+    padding: 6px;
+    background-color: bisque;
+    opacity: 0;
+    transition: .3s;
+}
+
+.color-select-btns {
+    text-transform: capitalize;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 100%;
+    transition: 0.2s;
+    width: 40px;
+    height: 40px;
+}
+
+.color-select-btns:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#submit-btn {
+    background-color: aqua;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+#submit-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#submit-btn:active {
+    transform: scale(0.9);
+}
+
+#no-attempts{
+    font-size: 50px;
+    position: fixed;
+    top: 30%;
+    background-color: beige;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 50px;
+}
