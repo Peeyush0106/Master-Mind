@@ -52,6 +52,7 @@ function setCellColor(id, color) {
     document.getElementById("cell-img-" + id).style.backgroundColor = color;
     document.getElementById("cell-img-" + id).setAttribute("codeColor", color);
     show_hidePallette(false);
+    cancelHide = false;
 }
 
 
@@ -198,7 +199,7 @@ function setMouseCoords(event) {
     mouseY = event.pageY - 120;
 }
 
-var cancelHide;
+var cancelHide = false;
 
 function show_hidePallette(visibility) {
     var palletteStyle = document.getElementById("color-selector-div").style
@@ -229,4 +230,5 @@ function show_hidePallette(visibility) {
 document.onmousedown = function () {
     console.log("MOUSE DOWN")
     show_hidePallette(false);
+    cancelHide = false;
 }
