@@ -4,9 +4,10 @@ body {
     justify-content: center;
     font-family: comic sans ms;
     text-align: center;
+    background-color: antiquewhite;
 }
 
-canvas{
+canvas {
     position: fixed;
     top: 0;
     left: 0;
@@ -17,6 +18,8 @@ canvas{
 #container {
     border: 3px solid black;
     padding: 3%;
+    transition: 0.5s;
+    opacity: 0;
 }
 
 .cells {
@@ -141,7 +144,37 @@ canvas{
     transform: scale(0.9);
 }
 
-#no-attempts{
+#reload-btn,
+#how-btn {
+    background-color: aqua;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    transition: 0.2s;
+    position: fixed;
+    top: 20px;
+}
+
+#reload-btn {
+    right: 20px;
+}
+
+#how-btn {
+    left: 20px;
+}
+
+#reload-btn:hover,
+#how-btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#reload-btn:active,
+#how-btn:active {
+    transform: scale(0.9);
+}
+
+#no-attempts {
     font-size: 50px;
     position: fixed;
     top: 30%;
@@ -149,4 +182,32 @@ canvas{
     border: 5px solid black;
     border-radius: 20px;
     padding: 50px;
+}
+
+#how-to-play {
+    position: fixed;
+    border: 2px solid black;
+    border-radius: 30px;
+    width: 80%;
+    background-color: antiquewhite;
+    padding: 20px;
+    top: 10%;
+    text-align: left;
+}
+
+#close-how-btn {
+    font-size: 50px;
+    background: transparent;
+    width: 70px;
+    transition: 0.3s;
+}
+
+#close-how-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+#close-how-div {
+    display: flex;
+    justify-content: end;
 }

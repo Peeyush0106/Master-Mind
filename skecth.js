@@ -36,7 +36,7 @@ function cellClicked(id, event) {
         setMouseCoords(event);
         console.log(mouseX)
         document.getElementById("cell-img-" + id).style.border = "3px solid red";
-        document.getElementById("color-selector-div").style.left = "619px";
+        document.getElementById("color-selector-div").style.left = (619 * (window.innerWidth / 1440)) + "px";
         document.getElementById("color-selector-div").style.top = mouseY + "px";
         show_hidePallette(true);
 
@@ -231,4 +231,27 @@ document.onmousedown = function () {
     console.log("MOUSE DOWN")
     show_hidePallette(false);
     cancelHide = false;
+}
+
+window.onload = function () {
+    document.getElementById("container").style.opacity = "100%";
+}
+
+window.onbeforeunload = function () {
+    document.getElementById("container").style.opacity = 0;
+}
+
+function restart() {
+    document.getElementById("container").style.opacity = 0;
+    setTimeout(function () { location.reload(); }, 500);
+}
+
+function howToPlay() {
+    document.getElementById("container").hidden = true;
+    document.getElementById("how-to-play").hidden = false;
+}
+
+function closeHowToPlay() {
+    document.getElementById("container").hidden = false;
+    document.getElementById("how-to-play").hidden = true;
 }
