@@ -235,6 +235,7 @@ document.onmousedown = function () {
 
 window.onload = function () {
     document.getElementById("container").style.opacity = "100%";
+    document.getElementById("container").style.zoom = document.getElementById("container").style.zoom * window.innerWidth / 1383;
 }
 
 window.onbeforeunload = function () {
@@ -254,4 +255,15 @@ function howToPlay() {
 function closeHowToPlay() {
     document.getElementById("container").hidden = false;
     document.getElementById("how-to-play").hidden = true;
+}
+
+window.onresize = resizeElements;
+
+function resizeElements() {
+    if (document.body.getElementsByTagName("canvas")[0]) {
+        document.body.getElementsByTagName("canvas")[0].style.width = window.innerWidth + 1000;
+        document.body.getElementsByTagName("canvas")[0].style.height = window.innerHeight;
+    }
+
+    document.getElementById("container").style.zoom = document.getElementById("container").style.zoom * window.innerWidth / 1383;
 }
